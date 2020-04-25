@@ -1,5 +1,7 @@
 # Настройка окружения macOS
 
+![.NET Core](https://github.com/temaweb/negotiate/workflows/.NET%20Core/badge.svg)
+
 * Тестовое приложение: https://github.com/temaweb/negotiate (Core 3.1)
 * Запуск приложения: `dotnet run --urls="http://hostname:port"`
 
@@ -78,7 +80,7 @@ app.UseMvc();
         -crypto AES256-SHA1
     ```
 
-## На севрере приложения
+## На сервере приложения
 
 0. Указал DNS `192.168.0.82`
 1. Создал /etc/krb5.conf:
