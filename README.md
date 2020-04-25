@@ -2,7 +2,16 @@
 
 Для понимания, в этой задаче 1% программирования и 99% администрирования. Так что, дальнейшая инструкция в основном для Devops и причастных.
 
-Со стороны кода нужно подключить пакет [Microsoft.AspNetCore.Authentication.Negotiate](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Negotiate) и настроить аутентификацию:
+* Тестовое приложение: https://github.com/temaweb/negotiate (Core 3.1)
+* Запуск приложения: `dotnet run --urls="http://hostname:port"`
+
+__Тестовая сеть__:
+
+* 192.168.0.23 — Клиент, Windows 10
+* 192.168.0.66 — Клиент/Сервер приложения, macOS Catalina
+* 192.168.0.82 — Контроллер домена/DNS, Windows Server 2012
+
+__Со стороны кода__ нужно подключить пакет [Microsoft.AspNetCore.Authentication.Negotiate](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Negotiate) и настроить аутентификацию:
 
 ```Startup.cs
 services
@@ -14,15 +23,6 @@ services
 app.UseAuthentication();
 app.UseMvc();
 ```
-
-* Тестовое приложение: https://github.com/temaweb/negotiate (Core 3.1)
-* Запуск приложения: `dotnet run --urls="http://hostname:port"`
-
-Моя сеть:
-
-* 192.168.0.23 — Клиент, Windows 10
-* 192.168.0.66 — Клиент/Сервер приложения, macOS Catalina
-* 192.168.0.82 — Контроллер домена/DNS, Windows Server 2012
 
 ## На DNS:
 
