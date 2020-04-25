@@ -73,7 +73,7 @@ app.UseMvc();
     ```cmd
     ktpass 
         -princ HTTP/application.temaweb.local@TEMAWEB.LOCAL 
-        -pass Pass@word!1 
+        -pass Pass@word1! 
         -mapuser TEMAWEB\bob.johnson 
         -pType KRB5_NT_PRINCIPAL 
         -out krb.keytab
@@ -90,9 +90,9 @@ app.UseMvc();
     
     [realms]
     TEMAWEB.LOCAL = {
-    	kdc = 192.168.0.82
-    	default_domain = temaweb.local
-    	admin_server = 192.168.0.82
+       kdc = 192.168.0.82
+       default_domain = temaweb.local
+       admin_server = 192.168.0.82
     }
     
     [logging]
@@ -106,8 +106,8 @@ app.UseMvc();
     ```
 2. Подключил keytab-файл и включил трейс:
     ```shell
-        export KRB5_KTNAME=/Users/temaweb/Downloads/krb.keytab
-        export KRB5_TRACE=/dev/stdout
+    export KRB5_KTNAME=/Users/temaweb/Downloads/krb.keytab
+    export KRB5_TRACE=/dev/stdout
     ```
 
 3. Залогинился под _bob.johnson_: `kinit bob.johnson@TEMAWEB.LOCAL`
@@ -139,20 +139,3 @@ app.UseMvc();
   ```
   [{"name":"mary.smith@TEMAWEB.LOCAL", "authType": "Kerberos"}]
   ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
