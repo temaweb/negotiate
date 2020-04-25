@@ -112,6 +112,10 @@
 
 ![alt text](images/server-client.png?raw=true)
 
+8. Сервер не должен содержать ошибок:
+
+![alt text](images/server-log.png?raw=true)
+
 ## На клиенте
 
 1. Входим в домен TEMAWEB.LOCAL как пользователь `mary.smith` и открываем `http://application.temaweb.local:8080/info`
