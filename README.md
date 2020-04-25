@@ -121,8 +121,8 @@ app.UseMvc();
     Apr 25 13:04:22 2020  Apr 25 23:03:21 2020  krbtgt/temaweb.local@temaweb.local
     Apr 25 13:05:10 2020  Apr 25 23:03:21 2020  http/application.temaweb.local@temaweb.local
     ```
-6. Запускаем приложение из директории приложения: `dotnet run --urls="http://application.temaweb.local:8080`
-7. Локально заходим на URL и проверяем:
+6. Запускаем приложение из директории приложения: `dotnet run --urls="http://application.temaweb.local:8080"`
+7. Локально заходим на `http://application.temaweb.local:8080/info` и проверяем:
 
 ![alt text](images/server-client.png?raw=true)
 
