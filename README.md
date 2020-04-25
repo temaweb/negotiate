@@ -1,6 +1,19 @@
-# Настройка окружения для Negotiate
+# Настройка окружения Linux/macOS
 
 Для понимания, в этой задаче 1% программирования и 99% администрирования. Так что, дальнейшая инструкция в основном для Devops и причастных.
+
+Со стороны кода нужно подключить пакет [Microsoft.AspNetCore.Authentication.Negotiate](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Negotiate) и настроить аутентификацию:
+
+```Startup.cs
+services
+   .AddAuthentication(NegotiateDefaults.AuthenticationScheme)
+   .AddNegotiate();
+```
+
+```Startup.cs
+app.UseAuthentication();
+app.UseMvc();
+```
 
 * Тестовое приложение: https://github.com/temaweb/negotiate (Core 3.1)
 * Запуск приложения: `dotnet run --urls="http://hostname:port"`
