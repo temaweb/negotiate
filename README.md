@@ -110,7 +110,7 @@ app.UseMvc();
     export KRB5_TRACE=/dev/stdout
     ```
 
-3. Залогинился под _bob.johnson_: `kinit bob.johnson@TEMAWEB.LOCAL`
+3. Залогинился под _bob.johnson_: `kinit bob.johnson`
 4. Залогинился под сервисом: `kinit HTTP/application.temaweb.local`
 5. Результат команды `klist`:
     ```
